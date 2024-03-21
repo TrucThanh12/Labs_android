@@ -72,13 +72,16 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.PlayerView
                 holder.tiendao.setChecked(true);
             }
         }
+        holder.hauve.setEnabled(false);
+        holder.tienve.setEnabled(false);
+        holder.tiendao.setEnabled(false);
 
         holder.btRemove.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(context);
                 builder.setTitle("Thong bao xoa");
-                builder.setMessage("Ban co chac chan muon xoa khong?");
+                builder.setMessage("Ban co chac chan muon xoa "+player.getName()+ " khong?");
                 builder.setIcon(R.drawable.remove);
                 builder.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
                     @Override
