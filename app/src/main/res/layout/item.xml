@@ -3,12 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="10dp">
+    android:background="@color/purple_500"
+    android:padding="10dp"
+    >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="8"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@drawable/layout_background">
         <ImageView
             android:id="@+id/img"
             android:layout_weight="3"
@@ -41,16 +44,19 @@
                     android:id="@+id/hauve"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textStyle="bold"
                     android:text="Hau ve" />
                 <CheckBox
                     android:id="@+id/tienve"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textStyle="bold"
                     android:text="Tien ve" />
                 <CheckBox
                     android:id="@+id/tiendao"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textStyle="bold"
                     android:text="Tien dao" />
             </LinearLayout>
         </LinearLayout>
@@ -62,6 +68,9 @@
             android:layout_weight="1"
             android:text="Remove"
             android:textSize="12dp"
-            tools:ignore="TextSizeCheck" />
+            tools:ignore="TextSizeCheck"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@color/teal_200"
+        />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

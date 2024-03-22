@@ -4,69 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_200"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Input a new player"
-        android:textSize="15dp"
-        android:gravity="center"/>
+        android:textSize="15dp" />
+
     <EditText
         android:id="@+id/name"
-        android:hint="enter name"
-        android:layout_marginTop="10dp"
-        android:textSize="12dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:hint="enter name"
+        android:textSize="12dp" />
+
     <EditText
         android:id="@+id/time"
-        android:hint="enter date of birth"
-        android:textSize="12dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        android:hint="enter date of birth"
+        android:textSize="12dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginLeft="30dp"
         android:layout_marginTop="5dp"
-        android:layout_marginLeft="30dp">
+        android:orientation="horizontal">
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chon gioi tinh"/>
+                android:text="Chon gioi tinh" />
+
             <RadioGroup
                 android:id="@+id/radio"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
+
                 <RadioButton
                     android:id="@+id/nam"
-                    android:hint="Nam"
-                    android:textSize="12dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:hint="Nam"
+                    android:textSize="12dp" />
+
                 <RadioButton
                     android:id="@+id/nu"
-                    android:hint="Nu"
-                    android:textSize="12dp"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:hint="Nu"
+                    android:textSize="12dp" />
             </RadioGroup>
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="70dp">
+            android:layout_marginLeft="70dp"
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Chon vi tri"/>
+                android:text="Chon vi tri" />
+
             <CheckBox
                 android:id="@+id/checkHauVe"
                 android:layout_width="wrap_content"
@@ -88,32 +100,38 @@
     </LinearLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/btAdd"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="Add"
             android:textSize="14dp"
-            android:layout_marginLeft="20dp"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"/>
+            android:background="@drawable/button_background"/>
+
         <Button
             android:id="@+id/btUpdate"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:text="Update"
             android:textSize="14dp"
-            android:layout_marginLeft="20dp"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"/>
+            android:background="@drawable/button_background"/>
     </LinearLayout>
+
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search"
-        app:iconifiedByDefault="false"
-        app:queryHint="Search view"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content"
+        app:iconifiedByDefault="false"
+        app:queryHint="Search view" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycleView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 </LinearLayout>
